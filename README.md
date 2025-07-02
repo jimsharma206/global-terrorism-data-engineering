@@ -10,27 +10,20 @@ We extract raw CSV data from Azure Blob Storage, transform and clean it using Az
 
 ## 🏗️ Architecture
 
-┌────────────────────┐
-│  Azure Blob Storage│
-│  (Raw GTD CSV file)│
-└────────┬───────────┘
-         ↓
-┌────────────────────────────┐
-│ Azure Data Factory Pipeline│
-│  - Copy Activity           │
-│  - Fault Tolerance Enabled │
-└────────┬───────────────────┘
-         ↓
-┌──────────────────────┐
-│ Azure SQL Database   │
-│ Table: dbo.GTD_Events│
-└────────┬─────────────┘
-         ↓
-┌──────────────────────────┐
-│ Tableau Public + Power BI│
-│   - Geospatial Map       │
-│   - Animated by Year     │
-└──────────────────────────┘
+Azure Blob Storage
+(Raw GTD CSV file)
+        ↓
+Azure Data Factory Pipeline
+  - Copy Activity
+  - Fault Tolerance Enabled
+        ↓
+Azure SQL Database
+  Table: dbo.GTD_Events
+        ↓
+Tableau Public + Power BI
+  - Geospatial Map
+  - Animated by Year
+
 
 ## 🧱 Tools Used
 - **Azure Data Factory**
